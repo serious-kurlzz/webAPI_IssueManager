@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using webAPI.Models;
 
 namespace webAPI.Data
 {
@@ -24,8 +25,15 @@ namespace webAPI.Data
                     UserName = "Ivan"
                 };
                 userManager.CreateAsync(user, "Password@123");
-            }
 
+                ApplicationUser user1 = new ApplicationUser()
+                {
+                    Email = "ilya@ilya.com",
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                    UserName = "Ilya"
+                };
+                userManager.CreateAsync(user1, "Password@123");
+            }
         }
     }
 }
