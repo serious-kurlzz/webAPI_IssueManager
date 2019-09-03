@@ -5,6 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190903164037_change_model_Issue.cs" />
+    <Compile Remove="Migrations\20190903164037_change_model_Issue.Designer.cs" />
+    <Compile Remove="Migrations\20190903165726_change_model_Issue.cs" />
+    <Compile Remove="Migrations\20190903165726_change_model_Issue.Designer.cs" />
+    <Compile Remove="Migrations\20190903170112_change_model_Issue1.cs" />
+    <Compile Remove="Migrations\20190903170112_change_model_Issue1.Designer.cs" />
+    <Compile Remove="Migrations\20190903174845_change_model_Issue11.cs" />
+    <Compile Remove="Migrations\20190903174845_change_model_Issue11.Designer.cs" />
+    <Compile Remove="Migrations\20190903194446_change_model_Issue__createdAtAndUpdatedAtCanBeNull.cs" />
+    <Compile Remove="Migrations\20190903194446_change_model_Issue__createdAtAndUpdatedAtCanBeNull.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

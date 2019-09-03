@@ -10,8 +10,8 @@ using webAPI.Data;
 namespace webAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190902222415_Change_Issue_model")]
-    partial class Change_Issue_model
+    [Migration("20190903174955_change_model_Issue")]
+    partial class change_model_Issue
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -202,7 +202,7 @@ namespace webAPI.Migrations
 
                     b.Property<DateTime?>("PlanFinishingDate");
 
-                    b.Property<int>("Status");
+                    b.Property<byte>("Status");
 
                     b.Property<DateTime>("UpdatedAt");
 

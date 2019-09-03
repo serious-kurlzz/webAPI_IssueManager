@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace webAPI.Models
 {
-    public enum Status
+    public enum Status : byte
     {
         Open = 1,
         Developing = 2,
@@ -18,10 +18,12 @@ namespace webAPI.Models
     {
         public int Id { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
         public string Description { get; set; }
 
+        [Required]
         [EnumDataType(typeof(Status))]
         public Status Status { get; set; }
 
@@ -33,6 +35,7 @@ namespace webAPI.Models
 
         public DateTime? FactFinishingDate { get; set; }
 
+        [Required]
         public string AuthorId { get; set; }
 
         public string AssigneeId { get; set; }

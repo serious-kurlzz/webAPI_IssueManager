@@ -18,13 +18,6 @@ namespace webAPI.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder
-                .Entity<Issue>()
-                .Property(e => e.Status)
-                .HasConversion(
-                    v => v.ToString(),
-                    v => (Status)Enum.Parse(typeof(Status), v)
-                );
             base.OnModelCreating(builder);
         }
     }

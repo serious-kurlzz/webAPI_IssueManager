@@ -98,7 +98,7 @@ namespace webAPI.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok(issue);
         }
 
         // POST: api/Issues
@@ -109,6 +109,28 @@ namespace webAPI.Controllers
             {
                 return BadRequest(ModelState);
             }
+
+            if (issue.Status != Status.Open)
+            {
+                issue.Status = Status.Open;
+            }
+
+            //var createdAt = issue.CreatedAt;
+            //var updatedAt = issue.UpdatedAt;
+
+            //if (String.IsNullOrEmpty(createdAt.ToString()))
+            //{
+            //    createdAt = DateTime.UtcNow.Date;
+            //}
+
+            //if (String.IsNullOrEmpty(updatedAt.ToString()) ||
+            //    updatedAt.CompareTo(createdAt) < 0 )
+            //{
+            //    updatedAt = createdAt;
+            //}
+
+            //issue.CreatedAt = createdAt;
+            //issue.UpdatedAt = updatedAt;
 
             _context.Issues.Add(issue);
             await _context.SaveChangesAsync();
