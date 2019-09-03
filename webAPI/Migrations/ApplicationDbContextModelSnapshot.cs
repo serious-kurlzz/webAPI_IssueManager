@@ -200,7 +200,7 @@ namespace webAPI.Migrations
 
                     b.Property<DateTime?>("PlanFinishingDate");
 
-                    b.Property<string>("Status");
+                    b.Property<int>("Status");
 
                     b.Property<DateTime>("UpdatedAt");
 

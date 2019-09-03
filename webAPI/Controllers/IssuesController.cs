@@ -27,7 +27,7 @@ namespace webAPI.Controllers
                 {
                     Name = "issue",
                     Description = "issue",
-                    Status = "new",
+                    Status = Status.Open,
                     CreatedAt = DateTime.UtcNow.Date,
                     UpdatedAt = DateTime.UtcNow.Date,
                     PlanFinishingDate = DateTime.UtcNow.Date.AddDays(1),

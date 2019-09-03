@@ -1,10 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace webAPI.Models
 {
+    public enum Status
+    {
+        Open = 1,
+        Developing = 2,
+        Testing = 3,
+        Closed = 4
+    }
+
     public class Issue
     {
         public int Id { get; set; }
@@ -13,7 +22,8 @@ namespace webAPI.Models
 
         public string Description { get; set; }
 
-        public string Status { get; set; }
+        [EnumDataType(typeof(Status))]
+        public Status Status { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
